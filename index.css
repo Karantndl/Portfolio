@@ -3,6 +3,9 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 strong,
 button,
@@ -37,30 +40,6 @@ h6 {
 .nav-logo {
   padding-left: 50px;
 }
-
-li,
-span {
-  font-size: large;
-  transition: all 0.3s ease; /* for smoother transition */
-}
-
-li:hover {
-  cursor: pointer;
-  color: #ff148b;
-  text-decoration: underline;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-}
-
-li:active {
-  cursor: pointer;
-  color: #ff148b;
-  transform: scale(
-    0.95
-  ); /* this property will help shrink the size of btn when click*/
-  text-decoration: underline;
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-}
-
 .nav-list {
   display: flex;
   gap: 45px;
@@ -68,6 +47,25 @@ li:active {
   list-style: none;
   padding: 0px;
   margin: 0px;
+}
+.nav-list a {
+  text-decoration: none;
+  color: inherit;
+  font-size: large;
+  transition: all 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #ff148b;
+  text-decoration: underline;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-list a:active {
+  color: #ff148b;
+  transform: scale(0.95);
+  text-decoration: underline;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* about/title section */
@@ -167,7 +165,18 @@ li:active {
   transition: all 0.3s ease;
 }
 .card-body .btn {
-  /* full width of the card body */
-  margin-bottom: 10px; /* spacing between buttons */
-  /* stack vertically */
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.tech {
+  justify-content: start;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-left: 0px;
+}
+
+.tech li {
+  color: #ff148b;
+  list-style: none;
 }
